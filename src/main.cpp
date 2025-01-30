@@ -1,5 +1,8 @@
 #include <iostream>
-
+extern "C" {
+#include <libavcodec/avcodec.h>
+#include <libavformat/avformat.h>
+}
 
 template <size_t N>
 static int getArrayLength(int(&arr)[N]) {
@@ -7,18 +10,12 @@ static int getArrayLength(int(&arr)[N]) {
 }
 
 int main() {
-	std::cout << "RTMP Streamer Initialized!!" << std::endl;
+	// Initialize FFmpeg library
 
-	int myArray[] = { 1, 2, 3, 4, 5 };
+	// Print FFmpeg version
+	std::cout << "FFmpeg version: " << av_version_info() << std::endl;
 
-	int length = sizeof(myArray) / sizeof(int);
+	std::cout << "RTMP Streamer Initialized" << std::endl;
 
-	std::cout << length << "\n";
-
-	for (int i = 0; i < getArrayLength(myArray); i++) {
-
-		std::cout << myArray[i] << "\n";
-
-	}
 	return 0;
 }
