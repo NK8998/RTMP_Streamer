@@ -1,0 +1,52 @@
+# Ignore build directory (CMake output)
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore compiled binaries and object files
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+*.exe
+*.out
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+.vs
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.pid
+*.lock
+
+# Ignore FFmpeg-generated files
+*.mp4
+*.avi
+*.flv
+*.mkv
+*.ts
+*.aac
+*.mp3
+
+# Ignore dependency files (if using Conan or vcpkg)
+conan.lock
+conanbuildinfo.*
+conanfile.lock
+vcpkg_installed/
+vcpkg/
+.vcpkg-root
+
+# Ignore debugging symbols and crash logs
+*.dSYM/
+*.pdb
+*.core
