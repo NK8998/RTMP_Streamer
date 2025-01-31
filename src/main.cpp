@@ -10,7 +10,6 @@ static int getArrayLength(int(&arr)[N]) {
 }
 
 int main() {
-	// Initialize FFmpeg library
 
 	// Print FFmpeg version
 	std::cout << "FFmpeg version: " << av_version_info() << std::endl;
