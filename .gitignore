@@ -1,5 +1,6 @@
 # Ignore build directory (CMake output)
 build/
+libraries/
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
