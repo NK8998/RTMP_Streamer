@@ -17,7 +17,7 @@ find_library(AVUTIL_LIB NAMES avutil PATHS libraries/ffmpeg/lib)
 find_library(SWSCALE_LIB NAMES swscale PATHS libraries/ffmpeg/lib)
 
 # Add the source files and create the executable
-add_executable(RTMP_Streamer src/main.cpp)
+add_executable(RTMP_Streamer src/main.cpp "include/ffmpeg_wrapper.hpp")
 
 # Link the FFmpeg libraries
 target_link_libraries(RTMP_Streamer ${AVFORMAT_LIB} ${AVCODEC_LIB} ${AVUTIL_LIB} ${SWSCALE_LIB})

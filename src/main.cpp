@@ -1,4 +1,5 @@
 #include <iostream>
+#include <include/ffmpeg_wrapper.hpp>
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
@@ -12,7 +13,7 @@ static int getArrayLength(int(&arr)[N]) {
 int main() {
 
 	// Print FFmpeg version
-	std::cout << "FFmpeg version: " << av_version_info() << std::endl;
+	getFfmpegVersion();
 
 	std::cout << "RTMP Streamer Initialized" << std::endl;
 
